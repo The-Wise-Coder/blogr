@@ -1,0 +1,60 @@
+.features {
+  overflow: hidden;
+
+  &__main {
+    @include breakpoints-up(medium) {
+      display: flex;
+      align-items: center;
+      margin-top: 8rem;
+    }
+  }
+
+  &__title,
+  &__subtitle {
+    text-align: center;
+    font-size: 2.8rem;
+    color: $veryDarkBlue;
+  }
+
+  &__title {
+    @include breakpoints-up(medium) {
+      font-size: 4rem;
+    }
+  }
+
+  &__img {
+    margin: 8rem 0;
+    order: 1;
+    flex: 1;
+
+    img {
+      max-width: 40rem;
+      margin: 0 auto;
+
+      @include breakpoints-up(medium) {
+        max-width: none;
+        margin: -10rem 0 0 32rem;
+        transform: scale(1.8);
+      }
+    }
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__details {
+    margin: 2rem 0 4rem;
+
+    @include breakpoints-up(medium) {
+      margin-bottom: 6rem;
+    }
+  }
+
+  &__subtitle,
+  &__details {
+    @include breakpoints-up(medium) {
+      text-align: left;
+    }
+  }
+}

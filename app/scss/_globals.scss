@@ -1,0 +1,166 @@
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px */
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background: $white;
+  font-size: 1.6rem;
+  font-family: $fontPrimary;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 600;
+}
+
+p {
+  color: $veryDarkGreyishBlue;
+  font-weight: 300;
+  word-spacing: 0.2rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+hr {
+  margin-top: 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  border-radius: 5rem;
+  font-family: $fontSecondary;
+  font-weight: 500;
+  transition: all 0.5s ease;
+  white-space: nowrap;
+
+  &--primary {
+    background: $white;
+    color: $lightRed;
+
+    &:hover {
+      background: $veryLightRedMob;
+      background: rgba(255, 255, 255, 0.2);
+      color: $white;
+    }
+  }
+
+  &--secondary,
+  &--secondary-outline {
+    background: transparent;
+    color: $white;
+
+    &:hover {
+      background: $white;
+      color: $lightRed;
+    }
+  }
+
+  &--secondary-outline {
+    border: 1px solid hsl(0, 0%, 100%);
+  }
+
+  &--mobile,
+  &--mobile-outline {
+    font-weight: 500;
+    align-self: center;
+  }
+
+  &--mobile {
+    color: $veryDarkGrayBlue;
+    margin: 1.5rem 0;
+  }
+
+  &--mobile-outline {
+    background: linear-gradient(to right, $veryLightRedMob, $lightRedMob);
+    color: $white;
+  }
+}
+
+.flex {
+  display: flex;
+
+  &-dir-col {
+    flex-direction: column;
+  }
+
+  &-x-c {
+    justify-content: center;
+  }
+
+  &-x-sb {
+    justify-content: space-between;
+  }
+
+  &-x-sa {
+    justify-content: space-around;
+  }
+
+  &-y-c {
+    align-items: center;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.hide-for-mobile {
+  @include breakpoints-down(small) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include breakpoints-up(medium) {
+    display: none;
+  }
+}

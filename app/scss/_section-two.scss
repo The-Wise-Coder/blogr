@@ -1,0 +1,75 @@
+.infrastructure {
+  background-image: url("../images/bg-pattern-circles.svg"),
+    linear-gradient(to bottom, $veryDarkGrayBlue, $veryDarkDesatBlue);
+  background-position: -11.4rem -23rem, center;
+  background-size: 60rem 60rem, cover;
+  background-repeat: no-repeat, no-repeat;
+  border-top-right-radius: 10rem;
+  border-bottom-left-radius: 10rem;
+  margin-top: 25rem;
+  padding: 22rem 0 6rem;
+
+  @include breakpoints-up(medium) {
+    background-position: -17.4rem -38rem, center;
+    background-size: 81rem 81rem, cover;
+    margin-top: 20rem;
+    padding-top: 6rem;
+  }
+
+  &__main {
+    position: relative;
+    @include breakpoints-up(medium) {
+      display: flex;
+    }
+  }
+
+  &__img {
+    position: relative;
+
+    @include breakpoints-up(medium) {
+      flex: 1;
+    }
+
+    img {
+      position: absolute;
+      top: -37rem;
+      right: 0;
+      left: 0;
+      margin: auto;
+      max-width: 35rem;
+
+      @include breakpoints-up(medium) {
+        max-width: 48rem;
+        top: 0;
+        left: -11rem;
+        bottom: 0;
+      }
+    }
+  }
+
+  &__content {
+    order: 1;
+    flex: 1;
+  }
+
+  &__title {
+    color: $white;
+    font-size: 3rem;
+    text-align: center;
+
+    @include breakpoints-up(medium) {
+      text-align: left;
+    }
+  }
+
+  &__details {
+    color: $white;
+    font-weight: 300;
+    margin: 2rem 0 4rem;
+    text-align: center;
+
+    @include breakpoints-up(medium) {
+      text-align: left;
+    }
+  }
+}
